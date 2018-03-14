@@ -3,7 +3,7 @@ package com.example.mrlu.coolweather;
 import org.litepal.crud.DataSupport;
 
 /**
- * Created by Mr.Lu on 2018/3/12.
+ * Created by Mr.ic_lu on 2018/3/12.
  */
 
 public class City extends DataSupport{

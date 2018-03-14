@@ -3,6 +3,7 @@ package com.example.mrlu.coolweather;
 import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,7 +32,7 @@ import okhttp3.Response;
 import okhttp3.internal.Util;
 
 /**
- * Created by Mr.Lu on 2018/3/12.
+ * Created by Mr.ic_lu on 2018/3/12.
  */
 
 public class ChooseAreaFragment extends Fragment {
@@ -82,6 +83,12 @@ public class ChooseAreaFragment extends Fragment {
                 } else if (currentLevel == LEVEL_CITY) {
                     selectedCity = cityList.get(i);
                     queryCounties();
+                } else if (currentLevel == LEVEL_COUNTY) {
+                    String weatherId = countyList.get(i).getWeatherId();
+                    Intent intent = new Intent(getActivity(), WeatherActivity.class);
+                    intent.putExtra("weather_id", weatherId);
+                    startActivity(intent);
+                    getActivity().finish();
                 }
             }
         });

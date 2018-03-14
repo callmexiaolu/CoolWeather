@@ -5,13 +5,15 @@ import android.text.TextUtils;
 import com.example.mrlu.coolweather.City;
 import com.example.mrlu.coolweather.County;
 import com.example.mrlu.coolweather.Province;
+import com.example.mrlu.coolweather.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by Mr.Lu on 2018/3/12.
+ * Created by Mr.ic_lu on 2018/3/12.
  */
 
 public class Utility {
@@ -73,5 +75,17 @@ public class Utility {
             }
         }
         return false;
+    }
+    /*从和风天气接口中将获取到的JSON数据解析成weather实体类*/
+    public static Weather handleWeatherResponse(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
