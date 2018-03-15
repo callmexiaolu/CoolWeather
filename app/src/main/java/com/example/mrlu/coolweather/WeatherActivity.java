@@ -51,6 +51,7 @@ public class WeatherActivity extends AppCompatActivity {
     public SwipeRefreshLayout refreshLayout;
     public DrawerLayout drawerLayout;
     private Button navButton;
+    public String weatherId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +83,6 @@ public class WeatherActivity extends AppCompatActivity {
         String weatherString = prefs.getString("weather", null);
         String bingPic = prefs.getString("bing_pic", null);
         refreshLayout.setColorSchemeResources(R.color.colorPrimary);
-        final String weatherId;
         if (weatherString != null) {
             //有缓存时直接解析天气数据
             Weather weather = Utility.handleWeatherResponse(weatherString);
@@ -112,6 +112,7 @@ public class WeatherActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
         if (bingPic != null) {
             Glide.with(this).load(bingPic).into(bingPicImg);
         } else {
@@ -122,6 +123,7 @@ public class WeatherActivity extends AppCompatActivity {
     根据天气id请求城市天气信息
      */
     public void requestWeather(final String weatherId) {
+        this.weatherId=weatherId;
         String weatherUrl = "http://guolin.tech/api/weather?cityid=" + weatherId + "&key=6fd30055a13e43eab6ff06950edfc19d";
         HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
             @Override
