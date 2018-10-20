@@ -18,10 +18,3 @@ UI：Fragment</br>
 
 
 ![2](https://github.com/callmexiaolu/Weather/blob/master/app/src/Screen/~Q5%5BKV%40UW4RRP4%25VICG%24RWR.png)
-
-
-
-![3](https://github.com/callmexiaolu/Weather/blob/master/app/src/Screen/PZ41(3N%7BXUGDE%25YJDG7%401GP.png)
-
-
-![4](https://github.com/callmexiaolu/Weather/blob/master/app/src/Screen/_7VINR908XZ_GG0O%24_V(N%5D9.png)
