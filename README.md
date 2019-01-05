@@ -18,3 +18,9 @@ UI：Fragment</br>
 
 
 ![2](https://github.com/callmexiaolu/Weather/blob/master/app/src/Screen/~Q5%5BKV%40UW4RRP4%25VICG%24RWR.png)
+
+
+
+$$
+J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，独立公式示例}
+$$
