@@ -20,6 +20,3 @@ UI：Fragment</br>
 ![2](https://github.com/callmexiaolu/Weather/blob/master/app/src/Screen/~Q5%5BKV%40UW4RRP4%25VICG%24RWR.png)
 
 
-
-$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
